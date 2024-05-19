@@ -15,6 +15,18 @@ function PersonalInfo() {
 
         ))
     }
+    const handleEmailInputChange = (e) => {
+        setPersonalInfo(prevInfo => (
+            {...prevInfo, email: e.target.value}
+
+        ))
+    }
+    const handlePhoneInputChange = (e) => {
+        setPersonalInfo(prevInfo => (
+            {...prevInfo, phone: e.target.value}
+
+        ))
+    }
 
   return (
     <div>
@@ -25,14 +37,16 @@ function PersonalInfo() {
       </div>
       <div>
         <label htmlfor="Email">Email:</label>
-        <input type="text" id="Email" name="Email" value={PersonalInfo.email} />
+        <input type="text" id="Email" name="Email" value={PersonalInfo.email} onChange={handleEmailInputChange}/>
       </div>
       <div>
         <label htmlfor="phone">Phone Number:</label>
-        <input type="text" id="phone" name="phone" value={PersonalInfo.phone} />
+        <input type="text" id="phone" name="phone" value={PersonalInfo.phone} onChange={handlePhoneInputChange}/>
       </div>
 
       <h1>{PersonalInfo.fullName}</h1>
+      <h1>{PersonalInfo.email}</h1>
+      <h1>{PersonalInfo.phone}</h1>
     </div>
   );
 }
