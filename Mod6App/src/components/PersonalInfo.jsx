@@ -35,15 +35,15 @@ function PersonalInfo(props) {
     <div>
       <h2>Personal Information</h2>
       <div>
-        <label htmlfor="fullName">Full Name:</label>
+        <label htmlfor="fullName">Full Name:<br></br></label>
         <input type="text" id="fullName" name="fullName" value={PersonalInfo.fullName} onChange={handleFullNameInputChange} />
       </div>
       <div>
-        <label htmlfor="Email">Email:</label>
+        <label htmlfor="Email"><br></br>Email:<br></br></label>
         <input type="text" id="Email" name="Email" value={PersonalInfo.email} onChange={handleEmailInputChange}/>
       </div>
       <div>
-        <label htmlfor="phone">Phone Number:</label>
+        <label htmlfor="phone"><br></br>Phone Number:</label>
         <input type="text" id="phone" name="phone" value={PersonalInfo.phone} onChange={handlePhoneInputChange}/>
       </div>
 

@@ -1,46 +1,89 @@
-#container {
-    display: flex;
+/* App.css */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  color:black;
+  background-color: azure;
 }
 
-.app-container {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-  }
-  
-  .form-container {
-    flex: 1;
-    margin-right: 20px;
-  }
-  
-  .display-container {
-    flex: 1;
-    margin-left: 20px;
-    background-color: #928d8d;
-    padding: 20px;
-    border-radius: 8px;
-  }
-  
-  .personal-info-display,
-  .education-info-display {
-    margin-bottom: 20px;
-  }
-  
-  .personal-info-display h2,
-  .education-info-display h2 {
-    margin-top: 0;
-  }
-  
-  button {
-    margin-top: 10px;
-    padding: 8px 12px;
-    background-color: #007bff;
-    color: rgb(255, 3, 3);
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
+.form-section {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.personal-education-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.form-container {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.display-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.display-container {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.personal-info-display,
+.education-info-display,
+.experience-info-display {
+  margin-bottom: 20px;
+}
+
+.personal-info-display h2,
+.education-info-display h2,
+.experience-info-display h2 {
+  margin-top: 0;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.form-date-input {
+  padding: 6px;
+}
+
+input {
+  background-color: #dffdfc; 
+  border: 1px solid #ccc; /
+  color: black; 
+  padding: 8px;
+  box-sizing: border-box;
+  border-radius: 4px; 
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
