@@ -28,7 +28,7 @@ function PersonalInfo(props) {
             {...prevInfo, phone: e.target.value}
 
         ))
-        props.onChange({...PersonalInfo, phonee: e.target.value})
+        props.onChange({...PersonalInfo, phone: e.target.value})
     }
 
   return (
