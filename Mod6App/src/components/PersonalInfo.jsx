@@ -1,6 +1,6 @@
 import {useState} from 'react'
 
-function PersonalInfo() {  
+function PersonalInfo(props) {  
 
     const [PersonalInfo, setPersonalInfo] = useState({
       fullName: "",
@@ -14,18 +14,21 @@ function PersonalInfo() {
             {...prevInfo, fullName: e.target.value}
 
         ))
+        props.onChange({...PersonalInfo, fullName: e.target.value})
     }
     const handleEmailInputChange = (e) => {
         setPersonalInfo(prevInfo => (
             {...prevInfo, email: e.target.value}
 
         ))
+        props.onChange({...PersonalInfo, email: e.target.value})
     }
     const handlePhoneInputChange = (e) => {
         setPersonalInfo(prevInfo => (
             {...prevInfo, phone: e.target.value}
 
         ))
+        props.onChange({...PersonalInfo, phonee: e.target.value})
     }
 
   return (
@@ -44,9 +47,7 @@ function PersonalInfo() {
         <input type="text" id="phone" name="phone" value={PersonalInfo.phone} onChange={handlePhoneInputChange}/>
       </div>
 
-      <h1>{PersonalInfo.fullName}</h1>
-      <h1>{PersonalInfo.email}</h1>
-      <h1>{PersonalInfo.phone}</h1>
+
     </div>
   );
 }
